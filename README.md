@@ -1,4 +1,4 @@
-# mobcase
+<h1 align="center"> mobcase </h1>
 
 Cross-platform (Android + iOS) mobile app testing toolkit: a set of small,
 fast console utilities under a common `mbc` prefix, built on a shared core.
