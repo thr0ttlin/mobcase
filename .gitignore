@@ -1,0 +1,51 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+pip-wheel-metadata/
+.installed.cfg
+*.egg
+
+# ---- virtualenvs ----
+venv/
+.venv/
+env/
+.env
+ENV/
+
+# ---- mobcase runtime / config ----
+.mobcase/            # debug keystore, cached state (usually in $HOME, ignore if local)
+*.keystore
+*.jks
+
+# ---- app artifacts ----
+*.apk
+*.xapk
+*.apkm
+*.apks
+*.ipa
+*.dex
+*.mobileconfig
+*.src/               # apktool / ipa extract output (mbcpack extract)
+Payload/             # stray iOS Payload trees from pull/build
+*.app/               # extracted .app bundles
+out/
+output/
+tests/
+
+# ---- editors / OS ----
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# ---- logs / scratch ----
+*.log
+scratch/
+tmp/

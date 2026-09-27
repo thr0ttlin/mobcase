@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mobcase"
+description = "Cross-platform (Android + iOS) mobile app testing toolkit: the mbc* commands."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "thr0ttlin" }]
+dynamic = ["version"]
+
+# Core dependency: Android static analysis (pure-python AXML/ARSC/DEX).
+# iOS static analysis (mbcinfo) is stdlib-only; the iOS *device* layer's
+# optional pure-python discovery lives in the [ios] extra below.
+dependencies = [
+    "androguard>=4.1",       # Android static analysis (AXML/ARSC/DEX)
+    "asn1crypto",            # X.509 parsing for signing info
+    "pymobiledevice3>=11",   # iOS device layer: usbmux discovery, lockdown, install, AFC
+    "paramiko>=3",           # iOS SSH/SFTP channel (in-memory password, no tty prompt)
+    "google-play-scraper",   # Play store recon (mbcstore); App Store uses stdlib
+]
+
+[project.optional-dependencies]
+frida = ["frida"]
+
+[project.scripts]
+mbcinfo = "mbc.commands.info:main"
+mbcdev  = "mbc.commands.dev:main"
+mbcstore = "mbc.commands.store:main"
+mbcpack = "mbc.commands.pack:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "mbc.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["mbc*"]

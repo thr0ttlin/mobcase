@@ -1,0 +1,28 @@
+# NB: patterns without ** match only the context root: use **/ for nested files.
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.egg-info/
+
+venv/
+.venv/
+env/
+.git/
+.gitignore
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+
+# sample apps / pulled packages / build outputs (often large; not needed in image)
+**/*.apk
+**/*.xapk
+**/*.apkm
+**/*.apks
+**/*.ipa
+**/*.mobileconfig
+**/*.src/
+tests/
+samples/
+out/
+outputs/
