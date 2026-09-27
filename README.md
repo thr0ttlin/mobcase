@@ -1,5 +1,12 @@
 <h1 align="center"> mobcase </h1>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3.9+-blue.svg" alt="Python">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License: MIT"></a>
+  <img src="https://img.shields.io/badge/platform-Android%20%7C%20iOS-lightyellow.svg" alt="Platforms">
+  <img src="https://img.shields.io/badge/status-alpha-orange.svg" alt="Status: alpha">
+</p>
+
 Cross-platform (Android + iOS) mobile app testing toolkit: a set of small,
 fast console utilities under a common `mbc` prefix, built on a shared core.
 
